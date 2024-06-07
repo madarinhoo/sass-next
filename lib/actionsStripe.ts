@@ -56,7 +56,7 @@ export const createCustomerPortal = async ()=>{
   const user = await getUser();
   const session = await stripe.billingPortal.sessions.create({
     customer: user?.stripeCustomerId as string,
-    return_url: "https://sass-next-mdc.vercel.app/dashboard/payment",
+    return_url: process.env.NODE_ENV === "production" ? process.env.PRODUCTION_URL :  "http://localhost/dashboard/payment",
   })
   return redirect(session.url)
 }
