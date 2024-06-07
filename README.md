@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SASS - MDC
 
-## Getting Started
+## Fonctionnalités
 
-First, run the development server:
+- Connexion utilisateur avec NextAuth.js
+- Création, lecture, mise à jour et suppression (CRUD) de notes
+- Édition de profil utilisateur
+- Intégration de Stripe pour un abonnement fictif
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Utilisées
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma](https://www.prisma.io/)
+- [NextAuth.js](https://next-auth.js.org/)
+- SQLite (base de données)
+- [Stripe](https://stripe.com/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Prérequis
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js installé localement
+- SQLite installé localement (ou un autre serveur de base de données)
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Cloner le dépôt
+2. Installer les dépendances avec `npm install`
+3. Configurer les variables d'environnement
+4. Lancer l'application avec `npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Créer un fichier `.env` à la racine du projet et configurer les variables suivantes :
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GITHUB_ID=
+- GITHUB_SECRET=
+- GOOGLE_CLIENT_ID=
+- STRIPE_KEY_SECRET=
+- STRIPE_API_ID=
+- STRIPE_WEBHOOK_SECRET=
+- DATABASE_URL=
+- PRODUCTION_URL=
+- NEXTAUTH_SECRET=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Obtenez les identifiants OAuth pour Google et GitHub depuis les plateformes de développement correspondantes.
+
+
+## Contribuer
+
+Si vous souhaitez contribuer à ce projet, veuillez consulter [CONTRIBUTING.md](CONTRIBUTING.md) pour obtenir des instructions sur la façon de démarrer.
+
+Ce projet est sous licence [MIT](LICENSE).
+
