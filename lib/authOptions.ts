@@ -22,12 +22,14 @@ export const authOptions: NextAuthOptions = {
   callbacks : {
     session: async({session,user})=> {
       // console.log(session,user);
+      stategy: "jwt";
       if(session.user){
         session.user.id = user.id
       }
       return session
     },
     jwt: async ({ user, token, trigger, session }) => {
+      stategy: "jwt";
       if (trigger === "update") {
         return { ...token, ...session.user };
       }
