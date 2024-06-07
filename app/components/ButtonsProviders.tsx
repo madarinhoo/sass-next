@@ -6,14 +6,12 @@ export default function ButtonsProviders() {
   return (
     <>
       <div className="flex flex-col gap-4">
-        <Button onClick={async () => await signIn('gmail')} className="flex items-center gap-2">
+        <Button onClick={async () => await signIn()} className="flex items-center gap-2">
           
-          <span>Continuer avec Google</span>
+          <span>Se connecter</span>
         </Button>
-        <Button onClick={async() =>  await signIn('github')} className="flex items-center gap-2">
-    
-          <span>Continuer avec GitHub</span>
-        </Button>
+
+        
       </div>
     </>
   );
