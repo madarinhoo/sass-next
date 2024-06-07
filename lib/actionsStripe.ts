@@ -42,7 +42,7 @@ export const createSubscription = async () => {
 
   const subscriptionUrl = await getStripeSession({
     customerId: dbUser?.stripeCustomerId as string ,
-    domainUrl: "http://localhost:3000",
+    domainUrl: "https://sass-next-mdc.vercel.app",
     priceId: process.env.STRIPE_API_ID as string
   });
 
@@ -56,7 +56,7 @@ export const createCustomerPortal = async ()=>{
   const user = await getUser();
   const session = await stripe.billingPortal.sessions.create({
     customer: user?.stripeCustomerId as string,
-    return_url: "http://localhost:3000/dashboard/payment",
+    return_url: "https://sass-next-mdc.vercel.app/dashboard/payment",
   })
   return redirect(session.url)
 }
